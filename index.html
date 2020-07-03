@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Maze Game</title>      
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <nav>
+        <div class="nav-wrapper black">
+            <a href="#" class="brand-logo">Maze</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="multyplayer.html">Multyplayer</a></li>
+            </ul>
+        </div>
+        </nav>
+                
+        <div class="parrentContainer">
+            <div class="container">
+                <div class="buttons">
+                    <input type="number" min="5" step="5" id="cellSize" placeholder="# of Grid Cells" style="font-size:26px;width: 200px;margin-right: 20px;text-align: center;" />
+                    <button id="newMaze" class="btn black"> New Game </button>
+                    <br>
+                    <div class="solve-cont">
+                        <label>
+                            <input type="checkbox" id="displayPath" />
+                            <span style="padding-left: 25px;">Display Solution</span>
+                        </label>
+                        <button id="Solve" class="btn black"> Solve </button> 
+                    </div>
+                </div>
+    
+    
+                <canvas id="mazeContainer">
+                    Game can't load! Make sure your browser supports HTML5.
+                </canvas>
+                <noscript>You need Javascript for the game to run. Please enable Javascript.</noscript>
+                
+                <p class="instructions">
+                    For movement: ↑/W (UP), ↓/S (DOWN), →/D (RIGHT), ←/A (LEFT)
+                </p>
+            </div>
+        </div>
+        <script type="module" src="./js/singleplayer.js"></script>
+    </body>
+</html>
